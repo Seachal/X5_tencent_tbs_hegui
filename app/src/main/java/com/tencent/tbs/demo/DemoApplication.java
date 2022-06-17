@@ -1,15 +1,15 @@
 package com.tencent.tbs.demo;
 
 import android.app.Application;
-import android.hardware.camera2.CameraCharacteristics;
 import android.util.Log;
-import com.tencent.smtt.export.external.TbsCoreSettings;
-import com.tencent.smtt.sdk.JsContext;
+
 import com.tencent.smtt.sdk.QbSdk;
 import com.tencent.smtt.sdk.QbSdk.PreInitCallback;
 import com.tencent.smtt.sdk.TbsListener;
-import java.util.HashMap;
 
+/**
+ * Application
+ */
 public class DemoApplication extends Application {
 
     private static final String TAG = "DemoApplication";
@@ -68,5 +68,6 @@ public class DemoApplication extends Application {
                 Log.i(TAG, "onViewInitFinished: " + isX5);
             }
         });
+
     }
 }

@@ -8,6 +8,7 @@ import com.tencent.tbs.demo.feature.X5WebViewActivity;
 public class FeatureManager {
 
     public static final int TYPE_ITEM = 0;
+//    header 
     public static final int TYPE_SEPARATOR = 1;
 
     public static final FeatureItem[] featureItems = {

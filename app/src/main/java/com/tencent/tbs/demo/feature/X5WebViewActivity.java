@@ -1,20 +1,17 @@
 package com.tencent.tbs.demo.feature;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Rect;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
-import androidx.annotation.Nullable;
-import androidx.appcompat.widget.PopupMenu;
-import com.tencent.smtt.export.external.extension.proxy.ProxyWebViewClientExtension;
-import com.tencent.smtt.export.external.interfaces.ISelectionInterface;
-import com.tencent.smtt.sdk.QbSdk;
-import com.tencent.tbs.demo.R;
 
+import androidx.annotation.Nullable;
+
+import com.tencent.smtt.sdk.QbSdk;
+
+/**
+ *x5
+ */
 public class X5WebViewActivity extends BaseWebViewActivity {
 
     private static final String M_TAG = "X5WebViewActivity";

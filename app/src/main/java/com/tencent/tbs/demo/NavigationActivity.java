@@ -2,12 +2,16 @@ package com.tencent.tbs.demo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.tencent.smtt.sdk.QbSdk;
 import com.tencent.tbs.demo.viewutils.FeatureManager;
 import com.tencent.tbs.demo.viewutils.FeatureManager.FeatureItem;
 import com.tencent.tbs.demo.viewutils.SectionListAdapter;
@@ -41,6 +45,7 @@ public class NavigationActivity extends AppCompatActivity {
                 adapter.addItem(item.featureName);
             }
         }
+        Log.i( "TbsVersion","wl"+QbSdk.getTbsVersion(getApplicationContext()));
     }
 
     private void handleItem(int position) {

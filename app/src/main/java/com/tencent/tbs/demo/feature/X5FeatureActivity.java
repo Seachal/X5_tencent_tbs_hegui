@@ -2,18 +2,20 @@ package com.tencent.tbs.demo.feature;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Rect;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.PopupMenu;
 import android.widget.Toast;
+
 import androidx.annotation.Nullable;
-import com.tencent.smtt.export.external.extension.proxy.ProxyWebViewClientExtension;
-import com.tencent.smtt.export.external.interfaces.ISelectionInterface;
+
 import com.tencent.smtt.sdk.QbSdk;
 import com.tencent.tbs.demo.R;
 
+
+/**
+ * x5特性
+ */
 public class X5FeatureActivity extends BaseWebViewActivity {
 
     private static final String M_TAG = "X5FeatureActivity";
