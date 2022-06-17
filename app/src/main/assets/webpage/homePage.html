@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, user-scale=1">
+  <title></title>
+  <style type="text/css" rel="stylesheet">
+        .line{
+            width:100%;
+            background: #000000;
+            height: 1px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+<h2 align="center">TBS WebView Demo</h2>
+<p>TBS WebView Demo Home page in assets/webpage</p>
+<hr/>
+
+<a href="https://www.qq.com/">腾讯网</a><p></p>
+
+<a href="https://x5.tencent.com/">TBS官网</a><p></p>
+
+<a href="https://www.baidu.com/">百度</a><p></p>
+
+<a href="https://m.sogou.com/">搜狗</a><p></p>
+
+<a href="https://m.amap.com/">高德地图（定位）</a><p></p>
+
+<a href="https://www.bilibili.com/">BiliBili</a>
+
+<hr/>
+<p align="center">调试工具与方法</p>
+
+<a href="https://debugtbs.qq.com/">TBS调试</a><p></p>
+
+<button onclick="openDebugX5()">X5内核调试</button><p></p>
+
+<button onclick="openQRCodeScan()">二维码扫描</button><p></p>
+
+<div>当前UA: <button onclick="showOrHideUA()">显示/隐藏</button></div>
+<p id="p_ua"></p>
+
+<a href="./coreLoadDebugPage.html">内核加载相关</a><hr>
+
+</body>
+
+<script type="text/javascript" >
+    function initUA() {
+        document.getElementById("funcName").innerHTML = "callBack Result: " + fn;
+        document.getElementById("callback").innerHTML = msg;
+    };
+
+    function openQRCodeScan() {
+        Android.openQRCodeScan();
+    }
+
+    function openDebugX5() {
+        Android.openDebugX5();
+    }
+
+    function showOrHideUA() {
+        if (document.getElementById("p_ua").innerHTML.length == 0) {
+            document.getElementById("p_ua").innerHTML = navigator.userAgent;
+        } else {
+            document.getElementById("p_ua").innerHTML = "";
+        }
+    }
+</script>
+</html>

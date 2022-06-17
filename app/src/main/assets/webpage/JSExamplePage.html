@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, user-scale=1">
+    <title></title>
+    <style type="text/css" rel="stylesheet">
+        .line{
+            width:100%;
+            background: #000000;
+            height: 1px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+        <p>this is a webview function demo page in assets/webpage, including HTML tag and js function</p>
+        <hr/>
+        <button onclick="jsAlert()">JsAlert调用</button> <p/>
+        <button onclick="jsConfirm()">JsConfirm调用</button> <p/>
+        <button onclick="jsPrompt()">JsPrompt调用</button> <p/>
+        <button onclick="jsOnBeforeUnload()">页面onbedoreunload调用</button> <p/>
+        <div>
+          <div id="funcName"></div>
+          <p id="callback"></p>
+        </div>
+        <hr/>
+        <div>单选：<input type="file" /></div><br />
+        <div>多选：<input type="file" multiple /></div>
+        <hr/>
+</body>
+
+
+<script type="text/javascript" >
+    function setCallBack(fn, msg) {
+        document.getElementById("funcName").innerHTML = "callBack Result: " + fn;
+        document.getElementById("callback").innerHTML = msg;
+    };
+
+    function jsAlert () {
+       alert("JavaScript alert()")
+    };
+
+    function jsConfirm() {
+       let res = confirm("JavaScript confirm()");
+       setCallBack("confirm()", res ? "confirm" : "cancel");
+    };
+
+    function jsPrompt() {
+       let res = prompt("JavaScript prompt()");
+       setCallBack("prompt()", res);
+    };
+
+    function jsOnBeforeUnload() {
+       window.onbeforeunload = function(e) {
+          return '关闭提示';
+       }
+       window.location.href = "./homePage.html";
+    };
+
+</script>
+</html>

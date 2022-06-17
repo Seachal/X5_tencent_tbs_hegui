@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, user-scale=1">
+  <title></title>
+  <style type="text/css" rel="stylesheet">
+        .line{
+            width:100%;
+            background: #000000;
+            height: 1px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+<h2 align="center">X5内核加载相关调试</h2>
+<hr/>
+<h3 align="center">调试工具</h3>
+
+<a href="http://debugtbs.qq.com/">TBS调试</a><p></p>
+
+<button onclick="openDebugX5()">X5内核调试</button><p></p>
+
+<button onclick="openQRCodeScan()">扫码安装</button><p></p>
+
+<div>当前UA: <button onclick="showOrHideUA()">显示/隐藏</button></div>
+<p id="p_ua"></p>
+
+<hr/>
+<h3 align="center">调试方法</h3>
+<p>
+  1. 当前WebView类型？(任意一种即可)
+  <li>1) UA中带TBS/04xxxx，对应内核版本; </li>
+  <li>2) 能打开<button onclick="openDebugX5()">X5内核调试</button>;</li>
+  <li>3) WebView.isX5Core()判断</li>
+  <li>4) 网页选择文本光标为：<img src="../images/cursor.jpg" height="20"></li>
+</p>
+<p>
+  2. 当前内核版本查看方式？
+  <li>UA中的 TBS/04xxxx，04xxxx为内核版本号</li>
+  <li>运行时的内核版本号：http://debugx5.qq.com -> 信息 “TBS内核版本”</li>
+  <li>安装目录的内核版本：http://debugtbs.qq.com -> 查看版本信息</li>
+  <li>QbSdk.getTbsVersion()</li>
+</p>
+<p>
+  3. 开发调试下载安装内核？
+  <a href="http://debugtbs.qq.com/">TBS调试</a> -> 安装线上内核
+</p>
+
+<hr/>
+<h3 align="center">附录</h3>
+<p>为了方便定位排查线上用户TBS相关问题，建议具备二维码扫描功能的App不拦截下列二维码域名</p>
+<p>debug工具二维码：</p>
+<a href="http://debugtbs.qq.com">http://debugtbs.qq.com</a>
+<img src="../images/debugtbs.png"/>
+<a href="http://debugx5.qq.com">http://debugx5.qq.com</a>
+<img src="../images/debugx5.png"/>
+
+
+
+</body>
+
+<script type="text/javascript" >
+    function openQRCodeScan() {
+        Android.openQRCodeScan()
+    }
+
+    function openDebugX5() {
+      Android.openDebugX5()
+    }
+
+    function showOrHideUA() {
+      if (document.getElementById("p_ua").innerHTML.length == 0) {
+        document.getElementById("p_ua").innerHTML = navigator.userAgent;
+      } else {
+        document.getElementById("p_ua").innerHTML = ""
+      }
+    }
+</script>
+</html>

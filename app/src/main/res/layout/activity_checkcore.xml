@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <Button
+                android:id="@+id/btn_download_x5_backend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="后台下载X5内核" />
+
+        <Button
+                android:id="@+id/btn_download_x5_frontend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="前台下载X5内核" />
+
+        <Button
+                android:id="@+id/btn_use_sys_core"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="直接使用系统内核" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

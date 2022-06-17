@@ -1,0 +1,128 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        tools:context=".feature.X5WebViewActivity">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/url_input_frame"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
+
+            <EditText
+                    android:id="@+id/urlEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.85"
+                    android:paddingLeft="15dp"
+                    android:hint="URL"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:selectAllOnFocus="true"
+                    android:background="@null" />
+
+            <Button
+                    android:id="@+id/urlLoad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:background="@null"
+                    android:textStyle="bold"
+                    android:text="GO" />
+        </LinearLayout>
+
+        <FrameLayout
+                android:id="@+id/webViewContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray">
+            <View
+                    android:id="@+id/select_popup_view"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/toolbar1"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="#ECF0F2"
+            android:orientation="horizontal">
+
+        <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2.5dp"
+                android:layout_weight="1"
+                android:alpha="255"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="10dp"
+                android:src="@drawable/ic_left" />
+
+        <ImageButton
+                android:id="@+id/btn_forward"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2.5dp"
+                android:layout_weight="1"
+                android:alpha="255"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="10dp"
+                android:src="@drawable/ic_right" />
+
+        <ImageButton
+                android:id="@+id/btn_more"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2.0dp"
+                android:layout_weight="1"
+                android:alpha="255"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="10dp"
+                android:src="@drawable/ic_service_list_fill" />
+
+        <ImageButton
+                android:id="@+id/btn_reload"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2.5dp"
+                android:layout_weight="1"
+                android:alpha="255"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="10dp"
+                android:src="@drawable/ic_refresh_line" />
+
+        <ImageButton
+                android:id="@+id/btn_exit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.0dp"
+                android:layout_weight="1"
+                android:alpha="255"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="10dp"
+                android:src="@drawable/ic_turn_off" />
+    </LinearLayout>
+
+
+</LinearLayout>

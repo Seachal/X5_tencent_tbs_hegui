@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android">
+    <svg class="bk-icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg"><g>	<path  fill="#737987" d="M32,8c13.3,0,24,10.7,24,24S45.3,56,32,56S8,45.3,8,32S18.7,8,32,8 M32,4C16.5,4,4,16.5,4,32		s12.5,28,28,28s28-12.5,28-28S47.5,4,32,4z"/>	<path  fill="#737987" d="M36,18 39,21 28,32 39,43 36,46 22,32 	z"/></g></svg>
+
+</vector>
