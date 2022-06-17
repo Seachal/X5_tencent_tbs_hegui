@@ -28,6 +28,7 @@ public class X5WebViewActivity extends BaseWebViewActivity {
         super.initWebView();
         Toast.makeText(this, mWebView.getIsX5Core() ?
                 "X5内核: " + QbSdk.getTbsVersion(this) : "SDK系统内核" , Toast.LENGTH_SHORT).show();
+        Log.i("X5Web_X5Log", ""+QbSdk.getTbsVersion(this));
     }
 
     private void startDefinedUrl() {

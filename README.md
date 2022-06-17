@@ -49,3 +49,6 @@ key是model，值是手机型号Build.Model，否则TBS会自取一次手机型�
 如果App不希望TBS获取手机序列号SN（Build.Serial），请在使用TBS前调用QbSdk的setUserID传入手机序列号
 还是setUserID接口
 key是serial，值是手机序列号Build.Serial，如果app不方便取手机序列号，可以改为传个随机数字符串，长度无要求，TBS内部生成ID标记用户
+
+
+## x5 合规

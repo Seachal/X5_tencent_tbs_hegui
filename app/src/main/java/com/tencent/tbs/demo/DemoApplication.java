@@ -26,6 +26,8 @@ public class DemoApplication extends Application {
 
             /**
              * @param stateCode 110: 表示当前服务器认为该环境下不需要下载
+             *
+             *  DemoApplication: onDownloadFinished: 110
              */
             @Override
             public void onDownloadFinish(int stateCode) {

@@ -3,6 +3,7 @@ package com.tencent.tbs.demo.feature;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.PopupMenu;
 import android.widget.Toast;
@@ -42,6 +43,7 @@ public class X5FeatureActivity extends BaseWebViewActivity {
         Toast.makeText(this, mWebView.getIsX5Core() ?
                 "X5内核: " + QbSdk.getTbsVersion(this) : "SDK系统内核" , Toast.LENGTH_SHORT).show();
         initWebViewClientExtension();
+        Log.i( "X5Feature_X5Log", "wl" + QbSdk.getTbsVersion(getApplicationContext()));
     }
 
     private void initWebViewClientExtension() {

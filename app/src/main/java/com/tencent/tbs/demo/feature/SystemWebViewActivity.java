@@ -1,7 +1,9 @@
 package com.tencent.tbs.demo.feature;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
+
 import com.tencent.smtt.sdk.QbSdk;
 
 /**
@@ -20,8 +22,10 @@ public class SystemWebViewActivity extends BaseWebViewActivity {
 
     @Override
     protected void initWebView() {
+//        进程强制系统内核接口
         QbSdk.forceSysWebView();
         super.initWebView();
         Toast.makeText(this, mWebView.getIsX5Core() ? "X5内核" : "SDK系统内核" , Toast.LENGTH_SHORT).show();
+        Log.i("System_X5Log", "" + QbSdk.getTbsVersion(this));
     }
 }

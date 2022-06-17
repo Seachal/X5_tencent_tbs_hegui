@@ -3,9 +3,7 @@ package com.tencent.tbs.demo.feature;
 import static com.tencent.tbs.demo.utils.PermissionUtil.REQUEST_EXTERNAL_STORAGE;
 import static com.tencent.tbs.demo.utils.PermissionUtil.REQUEST_GEOLOCATION;
 import static com.tencent.tbs.demo.utils.PermissionUtil.verifyLocationPermissions;
-import static com.tencent.tbs.demo.utils.PermissionUtil.verifyStoragePermissions;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
@@ -26,10 +24,12 @@ import android.webkit.JavascriptInterface;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
+
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 import com.tencent.smtt.export.external.interfaces.GeolocationPermissionsCallback;
@@ -44,6 +44,7 @@ import com.tencent.smtt.sdk.WebView;
 import com.tencent.smtt.sdk.WebViewClient;
 import com.tencent.tbs.demo.R;
 import com.tencent.tbs.demo.utils.WebViewJavaScriptFunction;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -56,6 +57,7 @@ public class BaseWebViewActivity extends AppCompatActivity {
     private ImageButton mBackBtn;
     private ImageButton mForwardBtn;
 
+//    腾讯 WebView
     protected com.tencent.smtt.sdk.WebView mWebView;
     private static final int DISABLE_ALPHA = 120;
     private static final int ENABLE_ALPHA = 255;
@@ -106,6 +108,10 @@ public class BaseWebViewActivity extends AppCompatActivity {
         initJavaScriptInterface();
 
         mWebView.loadUrl(mHomeUrl);
+//        判断是否为 x5 内核
+
+        Log.i("Base_X5Log", ""+mWebView.getIsX5Core());
+
     }
 
     protected void setTAG(String tag) {
