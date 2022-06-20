@@ -70,6 +70,7 @@ public class DemoApplication extends Application {
                 Log.i(TAG, "onViewInitFinished: " + isX5);
             }
         });
-
+//        设置这个值会影响兼容性。
+//        QbSdk.setUserID();
     }
 }
