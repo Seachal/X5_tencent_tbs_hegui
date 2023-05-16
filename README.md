@@ -4,7 +4,10 @@
 <a href="https://x5.tencent.com/">腾讯浏览服务</a>（Tencent Browsing Service, TBS）致力于提供优化移动端浏览体验的整套解决方案。
 </p>
 
-## 🌟 X5WebDemo
+
+> 这个项目主要是用于做腾讯 x5的合规。 
+
+## 🌟 X5WebDemo  合规
 
 该仓库为TBS-SDK使用Demo，为开发者提供SDK接入、功能使用等指引，以及便捷的X5 WebView开发模版。  
 同时，开发者可在该仓库 `议题` 中，提出TBS相关的issues。  
